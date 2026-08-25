@@ -35,5 +35,5 @@ function resetAll(){if(confirm("Reset XP, coins and streaks?")){db.kids.forEach(
 function closeM(){modal.classList.remove("show")}
 function toast(t){toastEl=document.getElementById("toast");toastEl.textContent=t;toastEl.style.display="block";setTimeout(()=>toastEl.style.display="none",1800)}
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-render();
+render();render();function selectKid(i){db.activeKid=i;save();render();}
 </script></body></html>
